@@ -1,0 +1,180 @@
+/*---------------------------------------
+  ROOT VARIABLES
+-----------------------------------------*/
+:root {
+    /* Colors */
+    --primary-color: #2b669a;
+    --secondary-color: #5a88b3;
+    --btn-bg-color: #2b669a;
+    --btn-bg-hover-color: #224a6e;
+    --section-bg-color: #f0f7fc;
+    --text-color: #333;
+    --white-color: #ffffff;
+    --footer-bg-color: #5a88b3;
+    --link-hover-color: #ffd700;
+
+    /* Font sizes */
+    --h1-font-size: 36px;
+    --p-font-size: 16px;
+    --menu-font-size: 18px;
+    --btn-font-size: 16px;
+
+    /* Font weights */
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+
+    /* Border radius */
+    --border-radius-small: 5px;
+    --border-radius-medium: 10px;
+    --border-radius-large: 15px;
+
+    /* Transition */
+    --transition-speed: 0.3s;
+}
+
+/*---------------------------------------
+  GLOBAL STYLES
+-----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/*---------------------------------------
+  NAVIGATION STYLES
+-----------------------------------------*/
+nav {
+    background-color: var(--secondary-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav a {
+    color: var(--white-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-bold);
+    transition: color var(--transition-speed);
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+/*---------------------------------------
+  SECTION STYLES
+-----------------------------------------*/
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    border-radius: var(--border-radius-medium);
+}
+
+form {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-small);
+    font-size: var(--btn-font-size);
+    transition: border-color var(--transition-speed);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    background-color: var(--btn-bg-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius-small);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    width: 80%;
+}
+
+button:hover {
+    background-color: var(--btn-bg-hover-color);
+}
+
+/*---------------------------------------
+  FOOTER STYLES
+-----------------------------------------*/
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+footer h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+}
+
+footer p {
+    font-size: var(--p-font-size);
+    line-height: 1.6;
+    color: var(--white-color);
+}
+
+/*---------------------------------------
+  RESPONSIVE STYLES
+-----------------------------------------*/
+@media (max-width: 768px) {
+    nav a {
+        font-size: 16px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    input[type="text"], input[type="password"], button {
+        width: 100%;
+    }
+}

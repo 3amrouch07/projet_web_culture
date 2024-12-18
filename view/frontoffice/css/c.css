@@ -1,0 +1,250 @@
+/*---------------------------------------
+  ROOT VARIABLES
+-----------------------------------------*/
+:root {
+    /* Colors */
+    --primary-color: #2b669a;
+    --secondary-color: #5a88b3;
+    --btn-bg-color: #2b669a;
+    --btn-bg-hover-color: #224a6e;
+    --section-bg-color: #e8f4fa;
+    --text-color: #333;
+    --white-color: #ffffff;
+    --footer-bg-color: #5a88b3;
+    --link-hover-color: #ffd700;
+
+    /* Font sizes */
+    --h1-font-size: 36px;
+    --p-font-size: 16px;
+    --menu-font-size: 18px;
+    --btn-font-size: 16px;
+
+    /* Font weights */
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+
+    /* Border radius */
+    --border-radius-small: 5px;
+    --border-radius-medium: 10px;
+    --border-radius-large: 15px;
+
+    /* Transition */
+    --transition-speed: 0.3s;
+}
+
+/*---------------------------------------
+  GLOBAL STYLES
+-----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/*---------------------------------------
+  NAVIGATION STYLES
+-----------------------------------------*/
+nav {
+    background-color: var(--secondary-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav a {
+    color: var(--white-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-bold);
+    transition: color var(--transition-speed);
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+/*---------------------------------------
+  SECTION STYLES
+-----------------------------------------*/
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    border-radius: var(--border-radius-medium);
+}
+
+form {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-small);
+    font-size: var(--btn-font-size);
+    transition: border-color var(--transition-speed);
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/*---------------------------------------
+  BUTTON STYLES
+-----------------------------------------*/
+button {
+    background-color: var(--btn-bg-color); /* Use primary button color */
+    color: var(--white-color); /* White text color */
+    padding: 12px 25px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: var(--border-radius-medium); /* Rounded corners */
+    font-size: var(--btn-font-size); /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color var(--transition-speed), transform var(--transition-speed); /* Smooth transition for hover effect */
+    width: 80%; /* Width of the button */
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: var(--btn-bg-hover-color); /* Darker button color on hover */
+    transform: translateY(-4px); /* Slight upward movement */
+}
+
+/*---------------------------------------
+  FOOTER STYLES
+-----------------------------------------*/
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+footer h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+}
+
+footer p {
+    font-size: var(--p-font-size);
+    line-height: 1.6;
+    color: var(--white-color);
+}
+
+/*---------------------------------------
+  LEFT AND RIGHT SECTION STYLES
+-----------------------------------------*/
+body {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.left-section, .right-section {
+    width: 50%; /* Each section takes 50% of the width */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color); /* Dark text for readability */
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding inside the sections */
+}
+
+/* Styling for the left section */
+.left-section {
+    background-color: #f2f2f2; /* Light gray background for left section */
+    border-right: 2px solid #ddd; /* Light border to separate the sections */
+}
+
+/* Styling for the right section */
+.right-section {
+    background-color: #e0e0e0; /* Slightly darker gray for the right section */
+}
+
+/* Styling for the paragraph inside the sections */
+p {
+    margin-bottom: 20px; /* Space below the paragraph */
+    font-size: 1.3em;
+    letter-spacing: 0.5px; /* Add some space between letters for better readability */
+    line-height: 1.5;
+}
+
+/* Styling for the links */
+a {
+    color: var(--white-color);
+    text-decoration: none;
+    background-color: var(--btn-bg-color); /* Green background for links */
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow around the link */
+}
+
+/* Hover effect for links */
+a:hover {
+    background-color: var(--btn-bg-hover-color); /* Darker button color on hover */
+    transform: translateY(-4px); /* Slight upward movement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* More prominent shadow on hover */
+}
+
+/*---------------------------------------
+  RESPONSIVE STYLES
+-----------------------------------------*/
+@media (max-width: 768px) {
+    nav a {
+        font-size: 16px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Stack sections on smaller screens */
+        height: auto; /* Allow sections to resize */
+    }
+}
